@@ -26,6 +26,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:14px}
+@media(max-width:700px){.eyebrow{font-size:.62rem;letter-spacing:.24em;align-items:flex-start}.eyebrow::before{margin-top:.5em;flex-shrink:0}}
 .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
 h1,h2,h3,.disp{font-family:var(--display);font-weight:400;line-height:1.15}
 h2{font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:.02em;margin:14px 0 10px}
@@ -48,6 +49,11 @@ section[id],div[id]{scroll-margin-top:96px}
 .topbar a:hover{color:var(--gold-2)}
 .topbar .lang.active{color:var(--gold-2);font-weight:600}
 .topbar .right{display:flex;gap:22px}
+@media(max-width:700px){
+  .topbar .wrap{height:auto;min-height:38px;padding-top:9px;padding-bottom:9px}
+  .topbar .wrap > div:first-child{display:none}
+  .topbar .right{width:100%;justify-content:flex-end;gap:20px;white-space:nowrap;flex-wrap:nowrap}
+}
 header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--silver-soft)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:82px}
 .brand{display:flex;align-items:center;gap:14px}
@@ -63,6 +69,8 @@ nav.links a:hover{color:var(--navy);border-color:var(--gold)}
 .menu-toggle svg{width:26px;height:26px;stroke:var(--navy)}
 @media(max-width:960px){
   nav.links,.nav .btn-gold{display:none}
+  .brand img{height:44px}
+  .brand .wordmark b{font-size:1rem}
   .menu-toggle{display:block}
   .mobile-menu{display:flex;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--silver-soft)}
   .mobile-menu a{padding:15px 24px;border-top:1px solid var(--silver-soft);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#39445E}
